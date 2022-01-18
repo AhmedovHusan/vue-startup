@@ -1,17 +1,16 @@
 <template>
   <v-app>
-    <Home/>
-    <router-view></router-view>
+    <div class="app">
+      <router-link :to="{ name: 'Home' }"></router-link>
+      <router-link :to="{ name: 'About' }"></router-link>
+    </div>
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import Home from './views/Home'
 
 export default {
   name: 'App',
-  components: {
-    Home
-  }
 };
 </script>
